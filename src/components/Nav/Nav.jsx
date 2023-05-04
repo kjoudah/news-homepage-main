@@ -1,26 +1,17 @@
 import logo from './../../assets/images/logo.svg';
+import './Nav.scss';
 
 function Nav() {
   return (
-    <header>
+    <header className="header">
       <img src={logo} alt="logo" />
       <nav>
-        <ul>
-          <a href="#">
-            <li>Home</li>
-          </a>
-          <a href="">
-            <li>New</li>
-          </a>
-          <a href="">
-            <li>Popular</li>
-          </a>
-          <a href="">
-            <li>Trending</li>
-          </a>
-          <a href="">
-            <li>Categories</li>
-          </a>
+        <ul className="nav">
+          <li className="nav-item"> Home</li>
+          <li className="nav-item">New</li>
+          <li className="nav-item">Popular</li>
+          <li className="nav-item">Trending</li>
+          <li className="nav-item">Categories</li>
         </ul>
       </nav>
     </header>

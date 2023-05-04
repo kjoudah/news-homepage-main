@@ -1,2 +1,16 @@
 @use 'reset.scss';
 @use 'globals.scss';
+
+body {
+  font-family: 'Inter';
+  display: grid;
+  margin: 5rem;
+  min-height: 100vh;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
