@@ -1,24 +1,54 @@
 .main-container {
+  margin-top: 5rem;
   display: grid;
   grid-template-areas:
-    'main main main side'
-    'main main main side'
-    'bottom bottom bottom bottom';
-  column-gap: 2rem;
-  row-gap: 4rem;
+    'main'
+    'side'
+    'bottom';
+  row-gap: 3rem;
+
+  @media (min-width: 800px) {
+    grid-template-areas:
+      'main main side'
+      'main main side'
+      'bottom bottom bottom';
+    column-gap: 2rem;
+    row-gap: 4rem;
+  }
+}
+
+.main-picture {
+  grid-area: main-picture;
+  height: 400px;
+  width: 40rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero {
+  grid-area: main-picture;
+  height: 400px;
+  width: 100%;
+  max-width: 55rem;
+
+  background: url(./../../assets/images/image-web-3-desktop.jpg) center/cover;
 }
 
 .main-content {
   grid-area: main;
   display: grid;
+  gap: 1rem;
   grid-template-areas:
-    'main-picture main-picture'
-    'title main-content';
-  row-gap: 2rem;
-}
+    'main-picture'
+    'title'
+    'main-content';
 
-.main-picture {
-  grid-area: main-picture;
+  @media (min-width: 800px) {
+    grid-template-areas:
+      'main-picture main-picture'
+      'title main-content';
+    // row-gap: 2rem;
+  }
 }
 
 .title {
@@ -66,19 +96,28 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: var(--font-weight-bold);
   }
 
   p {
     font-weight: var(--font-weight-normal);
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--grayish-blue-400);
   }
 }
+
+// .img {
+//   width: 150px;
+//   height: 150px;
+
+//   img {
+//     width: 100%;
+//   }
+// }
 
 .news-headline {
   display: flex;
@@ -92,24 +131,32 @@
   background-color: var(--grayish-blue-600);
   height: 1px;
   display: block;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .bottom-section-image {
-  width: 150px;
+  width: 125px;
   height: 150px;
+  flex-shrink: 0;
 }
 
 .bottom-content {
-  grid-area: bottom;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  grid-area: bottom;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .news-article {
   display: flex;
   flex-direction: row;
+  max-width: 30rem;
   gap: 1rem;
 
   span {
@@ -119,11 +166,18 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: var(--font-weight-extra-bold);
+    line-height: 1.3;
   }
 
   p {
     color: var(--dark-blue);
   }
+}
+
+.news-article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

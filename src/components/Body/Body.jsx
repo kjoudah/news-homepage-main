@@ -9,12 +9,13 @@ function Body() {
   return (
     <main className="main-container">
       <article className="main-content">
-        <div className="main-picture">
-          <picture>
-            <source src={web3Mobile} />
-            <img src={web3Desktop} alt="web 3"></img>
-          </picture>
-        </div>
+        {/* <div > */}
+        <div className="hero"></div>
+        {/* <picture className="main-picture">
+          <source srcSet={web3Desktop} media="(min-width:800px)" />
+          <img src={web3Mobile} alt="web 3"></img>
+        </picture> */}
+        {/* </div> */}
         <h1 className="title">The Bright Future of Web 3.0?</h1>
         <div className="cta">
           <p className="cta-paragraph">
@@ -54,7 +55,7 @@ function Body() {
               src={retroPcsImage}
               alt="retro pcs"
             />
-            <div>
+            <div className="news-article-content">
               <span>01</span>
               <h2>Reviving Retro PCs</h2>
               <p>What happens when old PCs are given modern upgrades?</p>
@@ -68,7 +69,7 @@ function Body() {
               src={top10LaptopsImage}
               alt="top 10 laptops"
             />
-            <div>
+            <div className="news-article-content">
               <span>02</span>
               <h2>Top 10 Laptops of 2022</h2>
               <p>Our best picks for varius needs and budgets.</p>
@@ -82,7 +83,7 @@ function Body() {
               src={gamingGrowthImage}
               alt="growth of gaming"
             />
-            <div>
+            <div className="news-article-content">
               <span>03</span>
               <h2>The Growth of Gaming</h2>
               <p>How the pandemic has sparked fresh opportunities.</p>

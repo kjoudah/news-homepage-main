@@ -2,15 +2,27 @@
 @use 'globals.scss';
 
 body {
-  font-family: 'Inter';
   display: grid;
-  margin: 5rem;
+
   min-height: 100vh;
+
+  font-family: 'Inter';
+
+  @media (min-width: 800px) {
+    margin: 3rem;
+    max-width: 1400px;
+    place-content: center;
+  }
 }
 
-ul,
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.App {
+  // display: grid;
+  // place-content: center;
+  // font-family: 'Inter';
+
+  // @media (min-width: 800px) {
+  //   margin: 3rem;
+  //   min-height: 100vh;
+  // }
+  // max-width: 100px;
 }
