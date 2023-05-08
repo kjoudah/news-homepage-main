@@ -1,28 +1,14 @@
 @use 'reset.scss';
 @use 'globals.scss';
 
-body {
-  display: grid;
-
+.App {
+  margin-inline: auto;
   min-height: 100vh;
 
   font-family: 'Inter';
-
-  @media (min-width: 800px) {
-    margin: 3rem;
-    max-width: 1400px;
-    place-content: center;
-  }
-}
-
-.App {
-  // display: grid;
-  // place-content: center;
-  // font-family: 'Inter';
-
-  // @media (min-width: 800px) {
-  //   margin: 3rem;
-  //   min-height: 100vh;
-  // }
-  // max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  // overflow: hidden;
+  max-width: 1400px;
+  // min-width: 500px;
 }

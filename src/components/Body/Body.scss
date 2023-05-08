@@ -1,6 +1,6 @@
 .main-container {
-  margin-top: 5rem;
   display: grid;
+  margin-inline: 1rem;
   grid-template-areas:
     'main'
     'side'
@@ -8,6 +8,7 @@
   row-gap: 3rem;
 
   @media (min-width: 800px) {
+    margin-inline: 3rem;
     grid-template-areas:
       'main main side'
       'main main side'
@@ -31,7 +32,11 @@
   width: 100%;
   max-width: 55rem;
 
-  background: url(./../../assets/images/image-web-3-desktop.jpg) center/cover;
+  background: url(./../../assets/images/image-web-3-mobile.jpg) center/cover;
+
+  @media (min-width: 800px) {
+    background: url(./../../assets/images/image-web-3-desktop.jpg) center/cover;
+  }
 }
 
 .main-content {
@@ -74,6 +79,7 @@
 }
 
 .cta-button {
+  cursor: pointer;
   background-color: var(--primary-red);
   color: var(--white);
   letter-spacing: 3px;
@@ -81,6 +87,11 @@
   padding: 0.5rem 2rem;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-color: var(--dark-blue);
+  }
 }
 
 .new-badge {
@@ -94,20 +105,10 @@
   background: var(--dark-blue);
   color: var(--white);
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-
-  h2 {
-    font-size: 1.4rem;
-    font-weight: var(--font-weight-bold);
-  }
-
-  p {
-    font-weight: var(--font-weight-normal);
-    font-size: 1rem;
-    color: var(--grayish-blue-400);
-  }
 }
 
 // .img {
@@ -123,6 +124,23 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  h2 {
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+
+    &:hover,
+    &:active {
+      color: var(--primary-orange);
+    }
+  }
+
+  p {
+    font-weight: var(--font-weight-normal);
+    font-size: 1rem;
+    color: var(--grayish-blue-400);
+  }
 }
 
 .news-headline:not(:last-child)::after {
@@ -166,9 +184,15 @@
   }
 
   h2 {
+    cursor: pointer;
     font-size: 1.3rem;
     font-weight: var(--font-weight-extra-bold);
     line-height: 1.3;
+
+    &:hover,
+    &:active {
+      color: var(--primary-red);
+    }
   }
 
   p {
